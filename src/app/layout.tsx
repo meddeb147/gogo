@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'IntakeAi - Smart Food Analysis',
-  description: 'Scan your meals and get instant nutritional information with IntakeAi',
+  title: 'ViteFait - Your Trusted Ride-Hailing App',
+  description: 'Book your ride instantly with ViteFait. Safe, reliable, and affordable transportation across Tunisia.',
 }
 
 export default function RootLayout({
