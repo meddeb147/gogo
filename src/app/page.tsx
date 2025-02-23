@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { QRCodeSVG } from 'qrcode.react'
 
 export default function Home() {
-  const apkDownloadUrl = 'https://drive.google.com/uc?export=download&id=1ea7CgWEn0_xn1LqQtJTWap8QEMRkawBK'
+  const apkDownloadUrl = 'https://drive.google.com/uc?export=download&id=1YGciBfZgHem_v3Namf6SrEufmiWE5OY9'
   const [activeDownload, setActiveDownload] = useState<'apk' | 'qr' | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
 
