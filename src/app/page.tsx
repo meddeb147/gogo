@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react'
 import { QRCodeSVG } from 'qrcode.react'
 
 export default function Home() {
-  const apkDownloadUrl = 'https://drive.google.com/uc?export=download&id=1YGciBfZgHem_v3Namf6SrEufmiWE5OY9'
+  const fileId = '1YGciBfZgHem_v3Namf6SrEufmiWE5OY9'
+  const apkDownloadUrl = `https://drive.google.com/file/d/${fileId}/view?usp=sharing`
   const [activeDownload, setActiveDownload] = useState<'apk' | 'qr' | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -61,7 +62,7 @@ export default function Home() {
               <div className="bg-gradient-to-b from-blue-50 to-white p-6 rounded-2xl inline-block mb-6 shadow-lg">
                 <div className="bg-white p-3 rounded-xl shadow-sm">
                   <QRCodeSVG 
-                    value={apkDownloadUrl}
+                    value={`https://drive.google.com/uc?export=download&id=${fileId}`}
                     size={200}
                     level="H"
                     includeMargin={true}
@@ -107,7 +108,7 @@ export default function Home() {
             <button
               onClick={() => {
                 setActiveDownload('apk');
-                window.open(apkDownloadUrl, '_blank');
+                window.open(`https://drive.google.com/uc?export=download&id=${fileId}`, '_blank');
               }}
               className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors duration-200 shadow-lg flex items-center justify-center space-x-2"
             >
